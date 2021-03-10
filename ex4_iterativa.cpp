@@ -25,6 +25,6 @@ int main()
     cin >> num1;
     cout << "secondo numero (intero): ";
     cin >> num2;
-    cout << euclide (num1, num2);
+    cout << "Euclide dice " << euclide (num1, num2) << endl;
     return 0;
 }
