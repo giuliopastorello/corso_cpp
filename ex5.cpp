@@ -4,13 +4,13 @@
 
 using namespace std;
 
-int gcd (int a, int b)
+int lcm (int a, int b)
 {
-    if (b == 0){
-        return a;
-    } else {
-        return gcd (b, a % b);
-    }
+    for (int i = 1; i < b; i++) {
+        if (((a * i) % b) == 0) {
+            return a * i;
+        }
+    } return a * b;
 }
 
 int main()
@@ -22,7 +22,7 @@ int main()
     cout << "secondo numero (intero): ";
     cin >> num2;
     
-    cout << "il mcm tra " << num1 << " e " << num2 << " = " << (num1 * num2) / gcd(num1, num2) << endl;
+    cout << "il mcm tra " << num1 << " e " << num2 << " = " << lcm (num1, num2) << endl;
     
     return 0;
 }
